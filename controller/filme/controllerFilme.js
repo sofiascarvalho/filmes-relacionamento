@@ -12,8 +12,8 @@ const message=require('../../modulo/config.js')
 const filmeDAO=require('../../model/DAO/filme.js')
 
 //import das controller para os relacionamentos
-const controllerClassifcacao=require('..classificacao/controllerClassificacao.js')
-const controllerFilmegenero = require('../filme/controllerFilmeGenero.js')
+const controllerClassifcacao=require('../classificacao/controllerClassificação.js')
+const controllerFilmeGenero = require('../filme/controllerFilmeGenero.js')
 const filmeGeneroDAO = require('../../model/DAO/filme_genero.js')
 
 //funcao para tratar a insercao de um filme no DAO
@@ -200,7 +200,7 @@ const buscarFilme=async function(id){
     try {
 
         let arrayFilmes=[]
-        
+
         if(id == ''||id==undefined||id==null||isNaN(id)||id<=0){
             return message.ERROR_REQUIRED_FIELDS
         }else{
